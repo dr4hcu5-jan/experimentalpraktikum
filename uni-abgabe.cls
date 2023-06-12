@@ -49,7 +49,6 @@
 \titlespacing*{\subsection}{0pt}{*1}{*1}
 \titlespacing*{\subsubsection}{0pt}{*1}{*1}
 \@addtoreset{section}{part}
-\setlength\bibitemsep{1.5em}
 \captionsetup{font=footnotesize, format=hang}
 \newarray\PartnerFirstNames
 \newarray\PartnerLastNames
