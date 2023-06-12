@@ -1,0 +1,52 @@
+% !TeX root = ./protokoll.tex
+\input{../header.tex}
+
+% TODO: Titel anpassen an den Titel des aktuellen Versuches
+\title{Vorlagenprotokoll \texorpdfstring{{\color{red} änder mich!}}{Änder mich}}
+
+% TODO: Dieses Datum auf das Versuchsdatum einstellen
+\date{\today}
+
+% TODO: Dieses Datum auf das Datum einstellen, an dem das Protokoll abgegeben 
+% werden soll.
+\submissiondate{\today}
+
+% TODO: Dieses Paket stellt einen Demotext bereit, es sollte entfernt werden und
+% die Inhalte in das Protokoll geschrieben werden
+\usepackage[math]{blindtext}
+
+\begin{document}
+\maketitle
+
+% Hier wird der Zeilenabstand auf das Äquivalent von Words 1,5-Zeilig gesetzt
+\doublespacing
+
+% Hier wird die Unterdatei der Einleitung in das Protokoll geladen und
+% anschließend wird die Seite umgebrochen
+\subfile{parts/introduction.tex}
+\newpage
+% Hier wird die Unterdatei des ersten Versuchs in das Protokoll geladen und
+% anschließend wird die Seite umgebrochen
+\subfile{parts/experiment1.tex}
+\newpage
+
+% Hier wird nun der Zeilenabstand auf einzeilig zurückgesetzt, da nun der Anhang
+% folgt und dieser kompakt sein sollte.
+\singlespacing
+\part{Anhang}
+\blindtext
+\printbibliography[heading=bibnumbered,title=Referenzen und Literatur]
+\newpage
+
+\section{Messwerttabelle}
+Die Messwerttabelle befindet sich auf den folgenden Seiten.
+Auf die Messwerttabelle folgen keine weiteren Anhänge.
+
+% Hier werden alle Seiten aus der Datei "messwerttabelle.pdf" angehängt.
+% Da das Bauen des Dokumentes fehlschlägt, wenn die Datei nicht vorhanden ist,
+% ist die folgende Zeile auskommentiert und muss wieder einkommentiert werden
+% damit die Messwerttabelle angehängt wird.
+% \includepdf[pages=-]{messwerttabelle.pdf}
+
+
+\end{document}

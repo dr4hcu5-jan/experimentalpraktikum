@@ -1,0 +1,27 @@
+% Hier wird die Dokumentenklasse aus dem übergeordneten Verzeichnis geladen
+% !!!!!!!! Diese Datei sollte möglichst so bestehen bleiben. Wird für ein
+% einzelnes Protokoll ein extra Paket benötigt, sollte dies in der dazugehörigen
+% protokoll.text Datei hinzugefügt werden.
+\documentclass[ngerman,leqno,x11names,fleqn]{../uni-abgabe}
+
+% Hier werden die Namen der Teammitglieder eingestellt
+\partner{Jan Eike}{Suchard}{jan.eike.suchard@uni-oldenburg.de}{5945617}
+\partner{Michaela}{Schammler}{michaela.schammler@uni-oldenburg.de}{XXXXXXX} %TODO: Matrikelnummer anpassen
+
+% Hier werden die Daten über das Modul eingestellt
+\module{phy214}{Experimentalpraktikum Physik}
+\semester{Wintersemester 2023/2024}
+
+% Hier wird die Nutzung von BibLaTeX als Quellenverwaltung eingerichtet
+\usepackage{csquotes}
+\usepackage[backend=biber,natbib=true,style=numeric,sorting=none,backref=false,alldates=iso,seconds=true,block=nbpar]{biblatex}
+\addbibresource{../global-sources.bib}
+
+% Hier wird eingestellt, dass Bilder entweder aus dem images der auf der 
+% obersten Verzeichnisebene liegt geladen werden können, oder aus dem images
+% Verzeichnis des Protokolls
+\graphicspath{{./images/},{../images/}}
+
+% Mit diesem Package ist es möglich das Protokoll auf mehrere einzelstehende
+% LaTeX Dateien aufzuteilen, die eigentständig kompilierbar sind
+\usepackage{subfiles}
